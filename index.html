@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Magic Task Board — Drag & Drop Task Board</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <header class="app-header">
+    <h1>Magic Task Board</h1>
+    <div class="header-actions">
+      <form id="new-task" aria-label="Create a new task">
+        <input name="title" id="title" placeholder="New task…" autocomplete="off" required aria-label="Task title" />
+        <select id="priority" aria-label="Priority">
+          <option class="priority-option" value="low">Low</option>
+          <option class="priority-option" value="med">Med</option>
+          <option class="priority-option" value="high">High</option>
+        </select>
+        <button id="add-btn" type="submit" title="Add task">Add</button>
+      </form>
+      <button id="export-btn" class="secondary" title="Export to JSON">
+        Export
+      </button>
+      <input id="import-input" type="file" accept="application/json" hidden />
+      <button id="import-btn" class="secondary" title="Import from JSON">
+        Import
+      </button>
+      <button id="clear-btn" class="danger" title="Clear the board">
+        Clear
+      </button>
+      <button id="theme-btn" class="secondary" title="Toggle theme" aria-pressed="false">
+        🌗
+      </button>
+      <button id="sort-toggle" class="secondary" title="Toggle auto sort" aria-pressed="false">
+        Auto sort: off
+      </button>
+    </div>
+  </header>
+
+  <main class="board" aria-label="Task board">
+    <section class="column" data-col="Start" aria-labelledby="start-label">
+      <header class="column-header">
+        <h2 id="start-label">Start</h2>
+        <span class="count" aria-live="polite">0</span>
+      </header>
+      <div class="place" role="list" aria-describedby="start-label"></div>
+    </section>
+
+    <section class="column" data-col="Progress" aria-labelledby="progress-label">
+      <header class="column-header">
+        <h2 id="progress-label">Progress</h2>
+        <span class="count" aria-live="polite">0</span>
+      </header>
+      <div class="place" role="list" aria-describedby="progress-label"></div>
+    </section>
+
+    <section class="column" data-col="Done" aria-labelledby="done-label">
+      <header class="column-header">
+        <h2 id="done-label">Done</h2>
+        <span class="count" aria-live="polite">0</span>
+      </header>
+      <div class="place" role="list" aria-describedby="done-label"></div>
+    </section>
+  </main>
+
+  <template id="item-template">
+    <article class="item" role="listitem" draggable="true" aria-grabbed="false">
+      <div class="item-main">
+        <span class="title clamp-4"></span>
+        <div class="meta-row">
+          <div class="badges"></div>
+          <button type="button" class="show-more">Show more</button>
+        </div>
+      </div>
+      <menu class="item-actions" type="toolbar">
+        <button class="edit" title="Edit" aria-label="Edit">✏️</button>
+        <button class="delete" title="Delete" aria-label="Delete">🗑️</button>
+      </menu>
+    </article>
+  </template>
+
+  <footer class="app-footer">
+    <small>Double‑click a card to edit. Click the badge to change priority.
+      Ctrl/Cmd+Enter — save.</small>
+  </footer>
+
+  <script defer src="./app.js"></script>
+</body>
+
+</html>

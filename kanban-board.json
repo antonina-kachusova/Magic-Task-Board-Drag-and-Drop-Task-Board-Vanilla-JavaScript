@@ -1,0 +1,50 @@
+{
+  "Start": [
+    {
+      "id": "krsbos5ct25",
+      "title": "Try to drag me",
+      "priority": "low",
+      "createdAt": 1764443201441
+    },
+    {
+      "id": "28hryzyct25",
+      "title": "Double‑click — edit",
+      "priority": "low",
+      "createdAt": 1764443201441
+    }
+  ],
+  "Progress": [
+    {
+      "id": "zbgdi26fjqo",
+      "title": "task 4\nLorem ipsum dolor sit amet consectetur adipisicing elit. Beatae dolores eligendi, odio sint voluptatem illum recusandae eveniet optio quisquam placeat inventore, error reprehenderit voluptatum, pariatur suscipit incidunt eos unde explicabo?",
+      "priority": "high",
+      "createdAt": 1764443201441
+    },
+    {
+      "id": "plovezzfdas",
+      "title": "task 2\nLorem ipsum dolor sit amet consectetur adipisicing elit. Beatae dolores eligendi, odio sint voluptatem illum recusandae eveniet optio quisquam placeat inventore, error reprehenderit voluptatum, pariatur suscipit incidunt eos unde explicabo?",
+      "priority": "med",
+      "createdAt": 1764443201441
+    },
+    {
+      "id": "o38zm2hfgw2",
+      "title": "task 3",
+      "priority": "med",
+      "createdAt": 1764443201441
+    },
+    {
+      "id": "py6zvdff9py",
+      "title": "task 1",
+      "priority": "low",
+      "createdAt": 1764443201441
+    }
+  ],
+  "Done": [
+    {
+      "id": "s1llog2fpc1",
+      "title": "task 5",
+      "priority": "high",
+      "createdAt": 1764443201441
+    }
+  ]
+}
